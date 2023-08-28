@@ -19,7 +19,7 @@ jobs:
       issues: write
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [18.x]
 
     name: Create a new release
     runs-on: ubuntu-latest
