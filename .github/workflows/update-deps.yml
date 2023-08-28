@@ -7,6 +7,8 @@ on:
 
 jobs:
   update:
+    permissions:
+      pull-requests: write
     strategy:
       matrix:
         node-version: [18.x]
