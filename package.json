@@ -21,7 +21,7 @@
     "e2e:headless": "start-server-and-test dev http://localhost:3000 cypress:headless",
     "storybook": "storybook dev -p 6006",
     "storybook:build": "storybook build",
-    "storybook:serve": "http-server storybook-static --port 6006 --silent",
+    "storybook:serve": "http-server storybook-static -a 127.0.0.1 --port 6006 --silent",
     "serve-storybook": "run-s storybook:*",
     "test-storybook:ci": "start-server-and-test serve-storybook http://localhost:6006 test-storybook",
     "prepare": "husky install",
