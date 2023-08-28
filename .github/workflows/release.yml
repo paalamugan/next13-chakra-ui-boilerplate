@@ -7,9 +7,16 @@ on:
       - completed
     branches:
       - main
+  workflow_dispatch:
+    
 
 jobs:
   release:
+    permissions:
+      contents: write
+      packages: write
+      pull-requests: write
+      issues: write
     strategy:
       matrix:
         node-version: [16.x]
@@ -30,5 +37,5 @@ jobs:
 
       - name: Release
         env:
-          GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
-        run: echo $GITHUB_TOKEN | base64 && echo ${{ secrets.RELEASE_TOKEN }} | base64 && echo ${{ secrets.GITHUB_TOKEN }} | base64 && echo "completed" && npx semantic-release
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npx semantic-release
