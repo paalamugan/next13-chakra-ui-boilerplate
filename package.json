@@ -9,7 +9,7 @@
     "build-stats": "cross-env ANALYZE=true yarn build",
     "clean": "rimraf .next .swc out coverage",
     "lint": "next lint",
-    "format": "next lint --fix && prettier '**/*.{json,yaml}' --write --ignore-path .gitignore",
+    "format": "yarn lint --fix && prettier '**/*.{json,yaml}' --write --ignore-path .gitignore",
     "check-types": "tsc --noEmit --pretty && tsc --project cypress --noEmit --pretty",
     "test": "jest",
     "db:generate": "drizzle-kit generate:sqlite",
@@ -28,7 +28,8 @@
     "postbuild": "next-sitemap",
     "release": "standard-version",
     "commit": "git-cz",
-    "build:tokens": "chakra-cli tokens packages/components/theme/src/index.ts --out packages/core/styled-system/dist/theming.types.d.ts"
+    "postinstall": "yarn gen:theme",
+    "gen:theme": "npx @chakra-ui/cli tokens ./src/styles/theme/index.ts"
   },
   "dependencies": {
     "@chakra-ui/next-js": "^2.1.5",
@@ -115,7 +116,7 @@
     "standard-version": "^9.5.0",
     "start-server-and-test": "^2.0.0",
     "storybook": "^7.3.2",
-    "typescript": "5.2.2"
+    "typescript": "~5.1.0"
   },
   "repository": {
     "type": "git",

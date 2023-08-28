@@ -1,5 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies, import/extensions */
-import './src/libs/Env.mjs';
+import './src/libs/env.mjs';
 import withBundleAnalyzer from '@next/bundle-analyzer';
 
 const bundleAnalyzer = withBundleAnalyzer({
@@ -9,7 +9,7 @@ const bundleAnalyzer = withBundleAnalyzer({
 /** @type {import('next').NextConfig} */
 export default bundleAnalyzer({
   eslint: {
-    dirs: ['.'],
+    dirs: ['src'],
   },
   poweredByHeader: false,
   basePath: '',

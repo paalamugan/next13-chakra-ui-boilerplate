@@ -3,19 +3,22 @@ import { extendTheme, withDefaultColorScheme } from '@chakra-ui/react';
 import { CardComponent } from './additions/card/Card';
 import { PanelContainerComponent } from './additions/layout/PanelContainer';
 import { components } from './components';
-import { inter } from './fonts';
 import { foundations } from './foundations';
 import { globalStyles } from './styles';
 
-const theme = extendTheme(
+const config = {
+  initialColorMode: 'light',
+};
+
+const fonts = {
+  heading: 'var(--font-inter)',
+  body: 'var(--font-inter)',
+};
+
+export const theme = extendTheme(
   {
-    fonts: {
-      heading: inter.style.fontFamily,
-    },
-    config: {
-      cssVarPrefix: 'app',
-      initialColorMode: 'light',
-    },
+    fonts,
+    config,
     ...foundations,
     components,
   },
@@ -24,5 +27,3 @@ const theme = extendTheme(
   CardComponent,
   PanelContainerComponent
 );
-
-export default theme;

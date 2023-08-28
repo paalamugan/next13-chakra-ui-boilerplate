@@ -2,7 +2,6 @@ import '@/styles/global.css';
 
 import type { Metadata } from 'next';
 
-import { ColorModeScript } from '@/components/chakra-ui';
 import { Providers } from '@/providers/providers';
 
 export const metadata: Metadata = {
@@ -40,7 +39,6 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="light">
       <body>
-        <ColorModeScript type="cookie" nonce="testing" />
         <Providers>{children}</Providers>
       </body>
     </html>
