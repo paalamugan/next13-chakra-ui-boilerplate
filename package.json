@@ -27,7 +27,7 @@
     "prepare": "husky install",
     "postbuild": "next-sitemap",
     "release": "standard-version",
-    "commit": "cross-env CZ=1 git-cz",
+    "commit": "git-cz",
     "build:tokens": "chakra-cli tokens packages/components/theme/src/index.ts --out packages/core/styled-system/dist/theming.types.d.ts"
   },
   "dependencies": {
