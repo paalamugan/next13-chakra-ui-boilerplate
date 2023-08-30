@@ -10,14 +10,8 @@ const config = {
   initialColorMode: 'light',
 };
 
-const fonts = {
-  heading: 'var(--font-inter)',
-  body: 'var(--font-inter)',
-};
-
 export const theme = extendTheme(
   {
-    fonts,
     config,
     ...foundations,
     components,

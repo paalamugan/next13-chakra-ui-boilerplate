@@ -2,7 +2,8 @@ export const globalStyles = {
   styles: {
     global: () => ({
       html: {
-        fontFamily: 'var(--font-inter)',
+        width: '100%',
+        height: '100dvh',
       },
     }),
   },
