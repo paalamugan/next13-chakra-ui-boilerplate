@@ -1,4 +1,4 @@
-# nBoilerplate and Starter for Next JS 13+, Chakra UI and TypeScript
+# Boilerplate and Starter for Next JS 13+, Chakra UI and TypeScript
 
 🚀 Boilerplate and Starter for Next.js with App Router and Page Router support, Chakra UI and TypeScript ⚡️ Made with developer experience first: Next.js, TypeScript, ESLint, Prettier, Husky, Lint-Staged, Jest, Testing Library, Commitlint, VSCode, Netlify, Chakra UI, Authentication with [Clerk](https://clerk.com?utm_source=github&utm_medium=sponsorship&utm_campaign=nextjs-boilerplate), Database with DrizzleORM (SQLite, PostgreSQL, and MySQL) and [Turso](https://turso.tech/?utm_source=nextjsstarterbp)
 
