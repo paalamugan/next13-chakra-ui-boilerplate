@@ -10,7 +10,7 @@
     "clean": "rimraf .next .swc out coverage",
     "lint": "next lint",
     "format": "yarn lint --fix && prettier '**/*.{json,yaml}' --write --ignore-path .gitignore",
-    "check-types": "tsc --noEmit --pretty && tsc --project cypress --noEmit --pretty",
+    "type-check": "tsc --noEmit --pretty && tsc --project cypress --noEmit --pretty",
     "test": "jest",
     "db:generate": "drizzle-kit generate:sqlite",
     "db:push": "drizzle-kit push:sqlite",
